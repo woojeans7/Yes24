@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예스24 - 대한민국 대표 인터넷서점</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./image/favicon_n.ico" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <!-- 전체 영역 wrap 지정 -->
+    <div id="wrap">
+      <!-- header 영역 시작 -->
+      <header id="header">
+        <div>
+          <h1 class="logo">
+            <a href="https://www.yes24.com/Main/default.aspx"
+              ><img src="./image/yes24_logo.png" alt="Yes24"
+            /></a>
+          </h1>
+        </div>
+        <div><span>로그인</span></div>
+        <div class="yesJoin"><a href="#">회원가입</a></div>
+      </header>
+      <!-- header 영역 끝 -->
+      <!-- main 시작 -->
+      <main id="main">
+        <!-- 로그인, 배너 wrap -->
+        <div id="contentWrap">
+          <!-- 로그인 영역 시작 -->
+          <div id="loginCon">
+            <div class="membership">
+              <ul>
+                <li class="memberTab active"><a href="#">회원</a></li>
+                <li class="nonMemberTab">
+                  <a href="#">비회원 주문확인</a>
+                </li>
+              </ul>
+            </div>
+            <!-- 회원 로그인 시작 -->
+            <form id="loginForm" class="member active">
+              <input class="idpw" type="text" placeholder="아이디" />
+              <p class="warnTxt">아이디를 입력해주세요.</p>
+              <input class="idpw" type="password" placeholder="비밀번호" />
+              <p class="warnTxt">비밀번호를 입력해주세요.</p>
+              <div class="loginChk">
+                <label>
+                  <em class="icon bgYUI"></em>
+                  <input type="checkbox" />로그인 상태 유지
+                </label>
+                <label>
+                  <em class="icon bgYUI"></em>
+                  <input type="checkbox" />아이디 저장
+                </label>
+              </div>
+              <button class="loginBtn" type="submit">
+                <span>로그인</span>
+              </button>
+            </form>
+            <div class="loginEtc member active">
+              <a href="#">아이디 찾기</a>
+              <p>|</p>
+              <a href="#">비밀번호 찾기</a>
+            </div>
+            <!-- 다른 방법으로 로그인 -->
+            <div class="loginType member active">
+              <ul>
+                <li class="snsLogin">
+                  <a href="#">네이버 아이디로 로그인</a>
+                  <span class="snsIcon"
+                    ><img src="./image/naver_logo.png" alt="네이버"
+                  /></span>
+                </li>
+                <li class="snsLogin">
+                  <a href="#">카카오 아이디로 로그인</a>
+                  <span class="snsIcon"
+                    ><img src="./image/kakaotalk_logo.png" alt="카카오"
+                  /></span>
+                </li>
+                <li class="snsLogin">
+                  <a href="#">페이스북 아이디로 로그인</a>
+                  <span class="snsIcon"
+                    ><img src="./image/facebook_logo.png" alt="페이스북"
+                  /></span>
+                </li>
+                <li class="snsLogin">
+                  <a href="#">모바일 간편 로그인</a>
+                  <span class="snsIcon"
+                    ><img src="./image/phone_icon.png" alt="모바일"
+                  /></span>
+                </li>
+              </ul>
+            </div>
+            <!-- 회원 로그인 끝 -->
+            <!-- 비회원 로그인 시작 -->
+            <form id="orderCheck" class="nonMember">
+              <input class="idpw" type="text" placeholder="주문번호" />
+              <p class="warnTxt">주문번호를 입력해주세요.</p>
+              <input class="idpw" type="password" placeholder="주문 비밀번호" />
+              <p class="warnTxt">주문 비밀번호를 입력해주세요.</p>
+              <button class="loginBtn" type="submit">
+                <span>확인</span>
+              </button>
+            </form>
+            <div class="orderEtc nonMember">
+              <a href="#">주문번호 찾기</a>
+              <p>|</p>
+              <a href="#">주문 비밀번호 찾기</a>
+            </div>
+            <!-- 비회원 로그인 끝 -->
+          </div>
+          <!-- 로그인 영역 끝 -->
+          <!-- 배너 영역 시작 -->
+          <div id="adBanner">
+            <div class="bigAd">
+              <a href="https://event.yes24.com/yesBenefit"
+                ><img src="./image/banner.jpg" alt="배너광고"
+              /></a>
+            </div>
+            <div class="smallAd">
+              <a
+                href="http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15460&id=1290"
+              >
+                <img src="./image/small.jpg" alt="반고흐" />
+              </a>
+            </div>
+          </div>
+          <!-- 배너 영역 끝 -->
+        </div>
+      </main>
+      <!-- main 끝 -->
+      <!-- footer 시작 -->
+      <footer id="footer">
+        <!-- 꼬리 광고 -->
+        <div class="tailAd">
+          <a href="https://www.yes24.com/notice/FirstClass/newmemCoupon.aspx"
+            ><img src="./image/foot.png" alt="하단광고"
+          /></a>
+        </div>
+        <!-- 주소 -->
+        <div class="address">
+          <address>
+            Copyright © <strong>YES24 Corp.</strong> All Rights Reserved.
+            <div class="pos_a" style="left: 0; top: 0; color: #f8f8f8">
+              EQUUS13
+            </div>
+          </address>
+        </div>
+      </footer>
+      <!-- footer 끝 -->
+    </div>
+  </body>
+</html>
