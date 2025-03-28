@@ -1,0 +1,401 @@
+/* ******* 초기화 ******* */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  font-size: 12px;
+}
+/* ******* 페이지 스타일 시작 ******* */
+#wrap {
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* *** 헤더 스타일 시작 *** */
+/*  헤더 영역 정렬  */
+#header {
+  width: 960px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+/* 로고 이미지 너비 지정 및 비율 설정*/
+#header .logo {
+  width: 125px;
+}
+.logo img {
+  width: 100%;
+}
+
+/* 로그인 글자 */
+#header span {
+  height: 100px;
+  line-height: 100px;
+  font-family: 'Noto Sans KR';
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* 회원가입 버튼 */
+#header .yesJoin {
+  border: 1px solid #ebebeb;
+  border-bottom-color: #d8d8d8;
+  border-right-color: #d8d8d8;
+  background-color: #fff;
+  color: #333;
+  width: 88px;
+  height: 37x;
+  line-height: 37px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+/* *** 헤더 스타일 끝 *** */
+
+/* ***** 메인 스타일 시작 ***** */
+#main {
+  margin: 0 auto;
+  padding: 60px 0;
+  width: 958px;
+  border: solid 1px #d8d8d8;
+  text-align: center;
+  background-color: #fff;
+}
+
+#contentWrap {
+  margin: 0 auto;
+  width: 760px;
+  height: 560px;
+  text-align: left;
+  position: relative;
+}
+
+/* *** 로그인 컨텐츠 영역 시작 *** */
+#loginCon {
+  width: 360px;
+  float: left;
+}
+
+/* 회원 비회원 탭 */
+.membership {
+  margin-bottom: 28px;
+}
+.membership ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 13px;
+}
+.membership li {
+  width: 50%;
+  cursor: pointer;
+}
+
+/* 탭 메뉴 구현 */
+.memberTab.active {
+  border-top: 1px solid #6699cc;
+  border-left: 1px solid #6699cc;
+  border-right: 1px solid #6699cc;
+  border-bottom: 1px solid transparent;
+  color: #6699cc;
+  font-weight: bold;
+}
+
+.nonMemberTab {
+  background-color: #f8f8f8;
+  border-top: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #6699cc;
+  border-left: 1px solid transparent;
+  color: #333;
+}
+
+.memberTab {
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #6699cc;
+  color: #333;
+}
+
+.nonMemberTab.active {
+  background-color: #f8f8f8;
+  border-top: 1px solid #6699cc;
+  border-right: 1px solid #6699cc;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid #6699cc;
+  color: #6699cc;
+  font-weight: bold;
+}
+
+/* 탭 메뉴 동작시 보이는 영역 */
+/* active 시 보여짐 */
+.member,
+.nonMember {
+  display: none;
+}
+.member.active,
+.nonMember.active {
+  display: block;
+}
+
+/* 로그인 영역 */
+.idpw {
+  padding: 9px 14px 11px 14px;
+  width: 100%;
+  height: 50px;
+  line-height: 27px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: solid 1px #ebebeb;
+  border-top-color: #d8d8d8;
+  border-left-color: #d8d8d8;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  color: #196ab3;
+}
+
+.idpw:focus {
+  border: solid 1px #0080ff;
+  outline: none;
+  font-weight: bold;
+}
+/* 로그인, 확인 버튼 */
+.loginBtn {
+  margin: 20px 0 0 0;
+  width: 100%;
+  padding: 17px;
+  border-color: #0080ff;
+  border-bottom-color: #0080ff;
+  border-right-color: #0080ff;
+  background-color: #0080ff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.loginBtn span {
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  line-height: 28px;
+  font-size: 20px;
+  font-family: 'ptd', '맑은 고딕' !important;
+  font-weight: 500;
+}
+
+/* 로그인 시 경고 */
+.warnTxt {
+  display: none;
+  margin-bottom: 7px;
+  padding: 7px 0 0 0;
+  line-height: 17px;
+  font-size: 13px;
+}
+.warnTxt.error {
+  display: block;
+  color: #ff6666;
+}
+
+.idpw.error {
+  border: 1px solid #ff6666;
+  margin: 0;
+}
+
+/* 체크박스 영역 */
+.loginChk {
+  margin-top: 10px;
+  display: flex;
+  gap: 1rem;
+}
+
+.loginChk label {
+  padding: 0 0 0 26px;
+  color: #666;
+  font-size: 13px;
+  line-height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.loginChk input {
+  margin-right: 11px;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* 체크박스 이미지 대체 */
+.loginChk input[type='checkbox'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  left: 0;
+}
+.bgYUI {
+  display: inline-block;
+  zoom: 1;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+  vertical-align: top;
+  background-image: url('./image/bgYUI.png');
+}
+.icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #ebebeb;
+  border-top-color: #d8d8d8;
+  border-left-color: #d8d8d8;
+  border-radius: 3px;
+  background-position: -201px -1px;
+}
+
+.icon.checkIcon {
+  border-color: #6699cc;
+  background-position: -231px -1px;
+}
+
+/* 아이디,주문번호 찾기 */
+.loginEtc,
+.orderEtc {
+  margin: 11px 0 0 0;
+  padding-bottom: 12px;
+}
+
+.loginEtc > a,
+.orderEtc > a {
+  font-size: 12px;
+  line-height: 30px;
+  color: #666;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.loginEtc > a:hover,
+.orderEtc > a:hover {
+  color: #333;
+}
+
+.loginEtc > p,
+.orderEtc > p {
+  display: inline-block;
+  margin: 3px 4px 0 4px;
+  width: 1px;
+  height: 12px;
+  text-indent: -999em;
+  text-align: left;
+  vertical-align: middle;
+  border-right: solid 1px #ccc;
+}
+
+/* 다른 방법으로 로그인 */
+.loginType {
+  padding: 15px 0 0 0;
+}
+
+.loginType li {
+  margin-top: 10px;
+  list-style: none;
+  align-items: center;
+  line-height: 38px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.loginType li:hover {
+  color: black;
+}
+
+.snsLogin {
+  border: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fff;
+}
+
+.snsLogin > span {
+  border-right: 1px solid #d8d8d8;
+}
+
+/* 이미지 위치 정렬 */
+.loginType .snsIcon {
+  position: absolute;
+  left: 0;
+  width: 39px;
+  height: 38px;
+  line-height: 54px;
+  text-align: center;
+}
+/* 이미지 크기 */
+.snsIcon img {
+  width: 70%;
+  height: 70%;
+}
+
+/* *** 로그인 컨텐츠 영역 끝 *** */
+
+/* *** 배너광고 컨텐츠 영역 시작 *** */
+#adBanner {
+  float: right;
+}
+/* 큰 배너, 작은 배너 */
+.bigAd {
+  width: 360px;
+  height: 360px;
+  overflow: hidden;
+}
+.smallAd {
+  width: 360px;
+  height: 140px;
+  margin-top: 10px;
+}
+.bigAd img,
+.smallAd img {
+  width: 100%;
+}
+/* *** 배너광고 컨텐츠 영역 끝 *** */
+
+/* ***** 메인 스타일 끝 ***** */
+
+/* ***** footer 스타일 시작 ***** */
+/* *** 하단 광고 *** */
+.tailAd {
+  margin: 20px auto 0 auto;
+  width: 960px;
+  height: 60px;
+}
+
+.tailAd img {
+  width: 100%;
+}
+
+/* *** 주소 *** */
+.address {
+  margin: 0 auto;
+  width: 960px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #666;
+}
+.address strong {
+  font-weight: bold;
+}
+/* ***** footer 끝 ***** */
+
+/* ******* 페이지 스타일 끝 ******* */
